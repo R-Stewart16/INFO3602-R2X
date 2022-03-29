@@ -12,44 +12,23 @@
 
 get_header(); ?>
 
-
 <?php do_action( 'vw_hair_salon_page_top' ); ?>
 
 <main id="maincontent" role="main" class="content-vw">
+<div class="page-banner">
+                        <div class="page-banner__bg-image" style="background-image:url(<?php the_field('page_banner_background_image');?>);"></div>
+                        <div class="page-banner__content container container--narrow">
+                            <h1 class="page-banner__title"> <?php the_title(); ?> </h1>  <!-- hollow -->
+                            <div class="page-banner__intro">
+                                <p> <?php the_field('page_banner_subtitle'); ?></p>
+                            </div>
+                        </div>  
+                    </div>
     <div class="container">
         <div class="middle-align">
     		<?php $vw_hair_salon_theme_lay = get_theme_mod( 'vw_hair_salon_page_layout','One Column');
                 if($vw_hair_salon_theme_lay == 'One Column'){ ?>
-                
-                <div class="hero-slider">
-                    <div class="hero-slider__slide" style="background-image: url(<?php echo get_theme_file_uri('images/barbershop-trends.jpg') ?>">
-                        <div class="hero-slider__interior container">
-                        <div class="hero-slider__overlay">
-                            <h2 class="headline headline--medium t-center">Free Transportation</h2>
-                            <p class="t-center">All students have free unlimited bus fare.</p>
-                            <p class="t-center no-margin"><a href="#" class="btn btn--blue">Learn more</a></p>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="hero-slider__slide" style="background-image: url(<?php echo get_theme_file_uri('images/nekash.jpg') ?>">
-                        <div class="hero-slider__interior container">
-                        <div class="hero-slider__overlay">
-                            <h2 class="headline headline--medium t-center">An Apple a Day</h2>
-                            <p class="t-center">Our dentistry program recommends eating apples.</p>
-                            <p class="t-center no-margin"><a href="#" class="btn btn--blue">Learn more</a></p>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="hero-slider__slide" style="background-image:url(<?php echo get_theme_file_uri('images/mullet.jpg') ?>">
-                        <div class="hero-slider__interior container">
-                        <div class="hero-slider__overlay">
-                            <h2 class="headline headline--medium t-center">Free Food</h2>
-                            <p class="t-center">Fictional University offers lunch plans for those in need.</p>
-                            <p class="t-center no-margin"><a href="#" class="btn btn--blue">Learn more</a></p>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
+                   
                     <!-- <div class="container container--narrow page-section"> -->
                     <?php while(have_posts()){ 
                         the_post();

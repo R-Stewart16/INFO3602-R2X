@@ -19,6 +19,9 @@
         <div id="mySidenav" class="nav sidenav">
           <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'vw-hair-salon' ); ?>">
             <ul>
+              <li <?php if(get_post_type() == 'post') echo 'class="current-menu-item"' ?>>
+                    <a href="<?php echo site_url('/home');;?>">Home</a>
+              </li>
               <li <?php if(get_post_type() == 'testimonial') echo 'class="current-menu-item"' ?>>
                     <a href="<?php echo get_post_type_archive_link('testimonials');?>">Testimonials</a>
               </li>

@@ -6,8 +6,13 @@
           <?php if ( get_theme_mod('vw_hair_salon_email_address','barbersalon@gmail.com') != "" ) {?>
             <i class="<?php echo esc_attr(get_theme_mod('vw_hair_salon_email_icon','fas fa-envelope')) ;?>"></i><span><a href="mailto:<?php echo esc_attr(get_theme_mod('vw_hair_salon_email_address',''));?>"><?php echo esc_html(get_theme_mod('vw_hair_salon_email_address',''));?></a></span>
           <?php }?>
+          
         </div>
         <div class="col-lg-6 col-md-6 booking-btn">
+        <div class="site-header_util">
+          <a href="<?php echo esc_url(site_url('/wp-login.php')); ?>" class="btn btn--small btn--orange float-left push-right">Login</a>
+          <a href="<?php echo esc_url(site_url('/wp-signup.php')); ?>" class="btn btn--small btn--dark-orange float-left push-left">Sign Up</a>
+        </div>
           <?php if ( get_theme_mod('vw_hair_salon_booking','BOOK Appointments now') != "" ) {?>
             <a href="<?php echo esc_html( get_theme_mod('vw_hair_salon_booking','') ); ?>"><i class="<?php echo esc_attr(get_theme_mod('vw_hair_salon_booking_appointment_icon','fas fa-calendar-alt')); ?>"></i><?php echo esc_html( get_theme_mod('vw_hair_salon_booking_text','') ); ?></a>
           <?php }?>

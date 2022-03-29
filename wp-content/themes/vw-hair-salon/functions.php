@@ -74,6 +74,13 @@ function vw_hair_salon_activation_notice() {
 	echo '</div>';
 }
 
+// Loading custom CSS on the login page.
+add_action('login_enqueue_scripts','ourLoginCSS');
+function ourLoginCSS(){
+	wp_enqueue_style('R^2X_main_styles', get_stylesheet_uri());
+	wp_enqueue_style('cutom-google-font','https://fonts.googleapis.com/css?
+	family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i');
+}
 /* Theme Widgets Setup */
 function vw_hair_salon_widgets_init() {
 	register_sidebar( array(

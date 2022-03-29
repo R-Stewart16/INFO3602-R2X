@@ -21,7 +21,7 @@ get_header(); ?>
           <?php if ( have_posts() ) :
             /* Start the Loop */
             while ( have_posts() ) : the_post();
-              get_template_part( 'template-parts/content-services');
+              get_template_part( 'template-parts/content');
             endwhile;
             else :
               get_template_part( 'no-results' ); 

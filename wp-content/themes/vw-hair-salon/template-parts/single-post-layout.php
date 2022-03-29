@@ -13,10 +13,7 @@
   $vw_hair_salon_archive_day   = get_the_time('d'); 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('inner-service'); ?>>
-
-
     <div class="single-post">
-        
         <h1><?php the_title();?></h1>
         <div class="content-vw">
             <?php if( get_theme_mod( 'vw_hair_salon_toggle_postdate',true) != '' || get_theme_mod( 'vw_hair_salon_toggle_author',true) != '' || get_theme_mod( 'vw_hair_salon_toggle_comments',true) != '' || get_theme_mod( 'vw_hair_salon_toggle_time',true) != '') { ?>
@@ -51,38 +48,6 @@
                     <div class="tags"><?php the_tags(); ?></div>  
                 <?php } ?>  
             </div> 
-            <?php 
-          // Query 1: This shows all the testimonials that talks about the service we provide in a list form
-          $relatedTestimonials = new WP_Query(array(
-            'posts_per_page' => -1,
-            'post_type' => 'testimonials',
-            'orderby' => 'title',
-            'order' => 'ASC',
-            'meta_query' => array(
-              array(
-                'key' => 'related_testimonials',
-                'compare' => 'LIKE',
-                'value' => '"'.get_the_ID().'"'
-              )
-            )
-          ));
-
-          if($relatedTestimonials->have_posts()){
-            echo '<hr>';
-            echo '<h2>'. get_the_title().' Testimonials</h2>';
-            echo '<ul>';
-            while($relatedTestimonials->have_posts()){
-                $relatedTestimonials->the_post();?>
-            <li>
-            <a href="<?php the_permalink();?>">
-            <img src="<?php the_post_thumbnail_url();?>">
-            <span> <?php the_title(); ?></span>
-            </a>
-            </li>
-            <?php
-            }
-            echo '</ul>';
-            }?>
         <?php
             // If comments are open or we have at least one comment, load up the comment template
             if ( comments_open() || '0' != get_comments_number() )

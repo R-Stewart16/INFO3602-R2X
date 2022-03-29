@@ -23,50 +23,6 @@ VW Hair Salon WordPress Theme is released under the terms of GNU GPL
   padding:0;
   outline:none;
 }
-
-
-.hero-slider {
-  position: relative;
-
-}
-
-.hero-slider div {
-  outline: none;
-}
-
-.hero-slider__interior {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-@media (min-width: 960px) {
-
-  .hero-slider__interior {
-    padding-top: 130px;
-    padding-bottom: 130px;
-  }
-}
-
-.hero-slider__slide {
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.hero-slider__overlay {
-  margin: 0 auto;
-  background-color: rgba(0, 0, 0, .68);
-  padding: 40px;
-  color: #FFF;
-}
-
-@media (min-width: 960px) {
-
-  .hero-slider__overlay {
-    width: 50%;
-  }
-}
-
-
 .page-banner {
   background-color: #000;
   padding: 80px 0 40px 0;
